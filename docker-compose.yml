@@ -1,0 +1,11 @@
+version: '3'
+services:
+  nginx:
+    restart: always
+    image: nginx:latest
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+      - ./logs:/var/log/nginx
+    ports:
+    - 80:80
+    - 443:443

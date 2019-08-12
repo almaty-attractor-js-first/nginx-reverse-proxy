@@ -7,5 +7,10 @@ services:
       - ./conf.d:/etc/nginx/conf.d
       - ./logs:/var/log/nginx
     ports:
-    - 80:80
-    - 443:443
+      - 80:80
+      - 443:443
+    networks:
+      - znet
+      
+networks:
+  znet:
